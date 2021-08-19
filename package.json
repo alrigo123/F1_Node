@@ -1,0 +1,20 @@
+{
+  "name": "f1-node",
+  "version": "1.0.0",
+  "description": "This the version of formula 1 es but in english and nodejs, let's ee what happend , I just want to learn more",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "author": "Alex Estrada Cuba",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-myconnection": "^1.0.4",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.12"
+  }
+}
