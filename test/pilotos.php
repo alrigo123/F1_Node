@@ -22,9 +22,8 @@ include 'layouts/header.php';
             </aside>
         </section>
     </div>
-
-
 </div>
+
 
 
 <section class="section-prost">
