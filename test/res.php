@@ -1,63 +1,224 @@
-<section class="section-senna">
-                <div class="div-senna">
-                    <img class="img-senna" alt="img Senna" src="img/pilotos/senna.webp "/>  
-                    <aside class="aside-senna">
-                    <h2 class="h2-senna">Ayrton Senna (Magic Senna) <h3 class="h3-senna"> "Being second is to be the first of the ones who lose."</h3></h2>
-                    
-                         <p class="p-senna">
-                            Ayrton Senna da Silva was a Brazilian racing driver who won the Formula One World Drivers' Championship in 1988, 
-                            1990 and 1991, and who is widely regarded as the greatest Formula One driver of all time.The 1994 San Marino Grand Prix 
-                            was held on the Autodromo Enzo e Dino Ferrari circuit located in Imola, Italy, between 28 April, and 1 May 1994. Senna stayed in room no. 200 
-                            at the Hotel Castello in Castel San Pietro Terme.He died in an accident leading the 1994 San Marino Grand Prix driving for Williams Racing.
-                         </p>
-                    </aside>
-                    <div class="reset"></div>
-                </div>
-            </section>
+<body>
+    <div class="div">
+        <header>
+            <div class="title">
+                <a href="index.html" target="_top"><img class="imag" alt="Web F1 principal" src="img/logo/logo-main.jpg "/></a>
+                <aside class="aside-t"> Posiciones F1 Temporada 2020</aside>
+                <div class="reset"></div>
+              </div>
+           
+           </header>
+           <div class="div__menu">
+            <nav class="menu">
+                <ul class="ul">
+                    <i class="fas fa-user"></i>
+                    <li class="nd"><a class="nd" href="Autor.html" target="_top">Autor</a></li>
+                    <li></li>
+                    <i class="fas fa-users"></i>
+                    <li class="nd"><a class="nd" href="Pilotos.html" target="_top">Pilotos</a></li>
+                    <li></li>
+                    <i class="fa fa-list" aria-hidden="true"></i>
+                    <li class="nd"><a class="nd" href="Posiciones.html" target="_top">Posiciones</a></li>
+                    <li></li>
+                    <i class="fab fa-teamspeak"></i>
+                    <li class="nd"><a class="nd" href="Equipos.html" target="_top">Equipos</a></li>
+                    <li></li>
+                    <i class="fas fa-sign-in-alt"></i>
+                    <li class="nd"><a class="nd" href="login.html" target="_top">Log In</a></li>
+                    <li></li>
+                    <i class="fas fa-user-plus"></i>
+                    <li class="nd"><a class="nd" href="signup.html" target="_top">Sing Up</a></li>
+        </div>
+            </nav>
+        <table>
+            <tr>
+                <th class="pos">Pos</th>
+                <th class="color" colspan="2">Apellido</th>
+                <th>Nombre</th>
+                <th colspan="2">Nacionalidad</th>
+                <th class="equipo">Equipo</th>
+                <th class="th-1">Puntos</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td colspan="2"><i id="i-mer" class="fa fa-square" aria-hidden="true"></i>Hamilton</td>
+                <td>Lewis</td>
+                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/grb.png"><aside>GBR</aside></td>
+                <td>MERCEDES BENZ PETRONAS</td>
+                <td>307</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td colspan="2"><i id="i-mer" class="fa fa-square" aria-hidden="true"></i>Bottas</td>
+                <td>Valtteri</td>
+                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/fin.svg"><aside>FIN</aside></td>
+                <td>MERCEDES BENZ PETRONAS</td>
+                <td>197</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td colspan="2"><i id="i-rb" class="fa fa-square" aria-hidden="true"></i>Verstappen</td>
+                <td>Max</td>
+                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/hol.svg"><aside>HOL</aside></td>
+                <td>ASTON MARTIN RED BULL RACING HONDA</td>
+                <td>170</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td colspan="2"><i id="i-rp" class="fa fa-square" aria-hidden="true"></i>Pérez</td>
+                <td>Sergio</td>
+                <td colspan="2"><img class="img-flag" alt="MEX" src="img/flag/mex.svg"><aside>MEX</aside></td>
+                <td>RACING POINT BWT MERCEDES</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td colspan="2"><i id="i-fe" class="fa fa-square" aria-hidden="true"></i>Leclerc</td>
+                <td>Charles</td>
+                <td colspan="2"><img class="img-flag" alt="MON" src="img/flag/mon.svg"><aside>MON</aside></td>
+                <td>SCUDERIA FERRARI</td>
+                <td>97</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td colspan="2"><i id="i-re" class="fa fa-square" aria-hidden="true"></i>Ricciardo</td>
+                <td>Daniel</td>
+                <td colspan="2"><img class="img-flag" alt="AUS" src="img/flag/aus.svg"><aside>AUS</aside></td>
+                <td>RENAULT</td>
+                <td>96</td>
+            </tr>
+            <tr>
+                <td>7</td>           
+                <td colspan="2"><i id="i-mc" class="fa fa-square" aria-hidden="true"></i>Sainz Jr.</td>
+                <td>Carlos</td>
+                <td colspan="2"><img class="img-flag" alt="ESP" src="img/flag/esp.png"><aside>ESP</aside></td>
+                <td>MCLAREN RENAULT</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td colspan="2"><i id="i-mc" class="fa fa-square" aria-hidden="true"></i>Norris</td>
+                <td>Lando</td>
+                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/grb.png"><aside>GBR</aside></td>
+                <td>MCLAREN RENAULT</td>
+                <td>74</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td colspan="2"><i id="i-rb" class="fa fa-square" aria-hidden="true"></i>Albon</td>
+                <td>Alexander</td>
+                <td colspan="2"><img class="img-flag" alt="THA" src="img/flag/tha.svg"><aside>THA</aside></td>
+                <td>ASTON MARTIN RED BULL RACING HONDA</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td colspan="2"><i id="i-ap" class="fa fa-square" aria-hidden="true"></i>Gasly</td>
+                <td>Pierre</td>
+                <td colspan="2"><img class="img-flag" alt="FRA" src="img/flag/fra.svg"><aside>FRA</aside></td>
+                <td>ALPHATAURI HONDA</td>
+                <td>63</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td colspan="2"><i id="i-rp" class="fa fa-square" aria-hidden="true"></i>Stroll</td>
+                <td>Lance</td>
+                <td colspan="2"><img class="img-flag" alt="CAN" src="img/flag/can.svg"><aside>CAN</aside></td>
+                <td>RACING POINT BWT MERCEDES</td>
+                <td>59</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td colspan="2"><i id="i-re" class="fa fa-square" aria-hidden="true"></i>Ocon</td>
+                <td>Esteban</td>
+                <td colspan="2"><img class="img-flag" alt="FRA" src="img/flag/fra.svg"><aside>FRA</aside></td>
+                <td>RENAULT</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td colspan="2"><i id="i-fe" class="fa fa-square" aria-hidden="true"></i>Vettel</td>
+                <td>Sebastian</td>
+                <td colspan="2"><img class="img-flag" alt="GER" src="img/flag/ger.png"><aside>GER</aside></td>
+                <td>SCUDERIA FERRARI</td>
+                <td>33</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td colspan="2"><i id="i-ap" class="fa fa-square" aria-hidden="true"></i>Kvyat</td>
+                <td>Daniil</td>
+                <td colspan="2"><img class="img-flag" alt="RUS" src="img/flag/rus.svg"><aside>RUS</aside></td>
+                <td>ALPHATAURI HONDA</td>
+                <td>26</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td colspan="2"><i id="i-rp" class="fa fa-square" aria-hidden="true"></i>Hülkenberg</td>
+                <td>Nico</td>
+                <td colspan="2"><img class="img-flag" alt="GER" src="img/flag/ger.png"><aside>GER</aside></td>
+                <td>RACING POINT BWT MERCEDES</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td colspan="2"><i id="i-al" class="fa fa-square" aria-hidden="true"></i>Giovinazzi</td>
+                <td>Antonio</td>
+                <td colspan="2"><img class="img-flag" alt="ITA" src="img/flag/ita.png"><aside>ITA</aside></td>
+                <td>ALFA ROMEO RACING FERRARI</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td colspan="2"><i id="i-al" class="fa fa-square" aria-hidden="true"></i>Räikkönen</td>
+                <td>Kimi</td>
+                <td colspan="2"><img class="img-flag" alt="FIN" src="img/flag/fin.svg"><aside>FIN</aside></td>
+                <td>ALFA ROMEO RACING FERRARI</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td colspan="2"><i id="i-ha" class="fa fa-square" aria-hidden="true"></i>Grosjean</td>
+                <td>Romain</td>
+                <td colspan="2"><img class="img-flag" alt="FRA" src="img/flag/fra.svg"><aside>FRA</aside></td>
+                <td>HAAS FERRARI</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td colspan="2"><i id="i-ha" class="fa fa-square" aria-hidden="true"></i>Magnussen</td>
+                <td>Kevin</td>
+                <td colspan="2"><img class="img-flag" alt="DEN" src="img/flag/den.png"><aside>DEN</aside></td>
+                <td>HAAS FERRARI</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>20</td>
+                <td colspan="2"><i id="i-wi" class="fa fa-square" aria-hidden="true"></i>Latifi</td>
+                <td>Nicholas</td>
+                <td colspan="2"><img class="img-flag" alt="CAN" src="img/flag/can.svg"><aside>CAN</aside></td>
+                <td>WILLIAMS MERCEDES</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td colspan="2"><i id="i-wi" class="fa fa-square" aria-hidden="true"></i>Russell</td>
+                <td>George</td>
+                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/grb.png"><aside>GBR</aside></td>
+                <td>WILLIAMS MERCEDES</td>
+                <td>0</td>
+            </tr>
+        </table>
+      
+<footer>
+    Comentarios (0)
+</footer>
+        <footer class="foot">
+            <time datetime="13-10-2020">Creado y Publicado 13-10-2020</time> 
+            <p></p>
+            &copy; Derechos reservados 2020
+        </footer>
 
-            <section class="section-prost">
-                <div class="div-prost">
-                    <img class="img-prost" alt="img Prost" src="img/pilotos/prost.jpg "/>  
-                    <aside class="aside-prost">
-                        <h2 class="h2-prost">Alain Prost (The Professor)<h3 class="h3-prost">"You were not in control You had no visibility: maybe there was a car in front of you, maybe not."</h3></h2>
-                         <p class="p-prost">
-                            Alain Marie Pascal Prostis a retired French racing driver and a four-time Formula One Drivers' Champion. In 1999, 
-                            Prost received the World Sports Award of the Century in the motor sport category.During the 1980s and early 1990s Prost formed a fierce sporting rivalry, mainly with Ayrton Senna 
-                            but also Nelson Piquet and Nigel Mansell. Senna joined Prost at McLaren in 1988 and the two had a series of controversial clashes, 
-                            including a collision at the 1989 Japanese Grand Prix that gave Prost his third Drivers' Championship.
-                         </p>
-                    </aside>
-                    <div class="reset"></div>
-                </div>
-            </section>
+    </div>
+    
 
-            <section class="section-fangio">
-                <div class="div-fangio">
-                    <img class="img-fangio" alt="img Fangio" src="img/pilotos/fangio.png "/>  
-                    <aside class="aside-fangio">
-                        <h2 class="h2-fangio">Juan Manuel Fangio (El Maestro)<h3 class="h3-fangio">"You need great passion, because everything you do with great pleasure, you do well."</h3></h2>
-                         <p class="p-fangio">
-                            He won five world championships in the 1950s, not an era renowned for safety. He did it for four different teams – Alfa Romeo, Ferrari, Mercedes-Benz and Maserati – driving some of 
-                            the most genuinely iconic racing cars in the history of the sport, and finished second twice. And while those were different times and far fewer races were run, Fangio’s hit rate is 
-                            still extraordinary: 29 pole positions, 48 front row starts, 24 victories, from 51 championship Grands Prix starts. 
-                            He was 46 when he won his last title, in 1957, a testament to his immense physical strength.
-                         </p>
-                    </aside>
-                    <div class="reset"></div>
-                </div>
-            </section>
-
-            <section class="section-schu">
-                <div class="div-schu">
-                    <img class="img-schu" alt="img Schumacher" src="img/pilotos/schu.jpg "/>  
-                    <aside class="aside-schu">
-                        <h2 class="h2-schu">Michael Schumacher (The kaiser)<h3 class="h3-schu">"I've always believed that you should never, ever give up and you should always keep fighting even when there's only a slightest chance."</h3></h2>
-                         <p class="p-schu">
-                            He still polarises opinion, and there’s no question that he over-stepped the mark more often than was necessary. To put it mildly. But Michael Schumacher remains an 
-                            all-time great and not just because he won seven world championships, 91 races and smashed every record there was to smash. Or that he possessed the Senna-like ability to 
-                            drive his car right on the limit, while being physically fit and intelligent enough to keep a good chunk of his mental firepower in reserve to manage tricky pit-wall calls.
-                         </p>
-                    </aside>
-                    <div class="reset"></div>
-                </div>
-            </section>
+</body>

@@ -25,56 +25,82 @@ include 'layouts/header.php';
 </div>
 
 
-
-<section class="section-prost">
-    <div class="div-prost">
-        <img class="img-prost" alt="img Prost" src="img/pilotos/prost.jpg " />
-        <aside class="aside-prost">
-            <h2 class="h2-prost">Alain Prost (The Professor)<h3 class="h3-prost">"You were not in control You had no visibility: maybe there was a car in front of you, maybe not."</h3>
-            </h2>
-            <p class="p-prost">
-                Alain Marie Pascal Prostis a retired French racing driver and a four-time Formula One Drivers' Champion. In 1999,
-                Prost received the World Sports Award of the Century in the motor sport category.During the 1980s and early 1990s Prost formed a fierce sporting rivalry, mainly with Ayrton Senna
-                but also Nelson Piquet and Nigel Mansell. Senna joined Prost at McLaren in 1988 and the two had a series of controversial clashes,
-                including a collision at the 1989 Japanese Grand Prix that gave Prost his third Drivers' Championship.
-            </p>
-        </aside>
-        <div class="reset"></div>
+<div class="row justify-content-center align-items-center my-3 mx-2" style="border: 1px solid red;">
+    <div class="col-md-9">
+        <section class="section-prost">
+            <aside class="aside-prost">
+                <h2 class="h2-prost">Alain Prost (The Professor)<h3 class="h3-prost">"You were not in control You had no visibility: maybe there was a car in front of you, maybe not."</h3>
+                </h2>
+                <p class="p-prost">
+                    Alain Marie Pascal Prostis a retired French racing driver and a four-time Formula One Drivers' Champion. In 1999,
+                    Prost received the World Sports Award of the Century in the motor sport category.During the 1980s and early 1990s Prost formed a fierce sporting rivalry, mainly with Ayrton Senna
+                    but also Nelson Piquet and Nigel Mansell. Senna joined Prost at McLaren in 1988 and the two had a series of controversial clashes,
+                    including a collision at the 1989 Japanese Grand Prix that gave Prost his third Drivers' Championship.
+                </p>
+            </aside>
+        </section>
     </div>
-</section>
-
-<section class="section-fangio">
-    <div class="div-fangio">
-        <img class="img-fangio" alt="img Fangio" src="img/pilotos/fangio.png " />
-        <aside class="aside-fangio">
-            <h2 class="h2-fangio">Juan Manuel Fangio (El Maestro)<h3 class="h3-fangio">"You need great passion, because everything you do with great pleasure, you do well."</h3>
-            </h2>
-            <p class="p-fangio">
-                He won five world championships in the 1950s, not an era renowned for safety. He did it for four different teams – Alfa Romeo, Ferrari, Mercedes-Benz and Maserati – driving some of
-                the most genuinely iconic racing cars in the history of the sport, and finished second twice. And while those were different times and far fewer races were run, Fangio’s hit rate is
-                still extraordinary: 29 pole positions, 48 front row starts, 24 victories, from 51 championship Grands Prix starts.
-                He was 46 when he won his last title, in 1957, a testament to his immense physical strength.
-            </p>
-        </aside>
-        <div class="reset"></div>
+    <div class="col-md-3">
+        <div class="div-prost text-center">
+            <img class="img-prost" width="150" alt="img Prost" src="img/pilotos/prost.jpg " />
+        </div>
     </div>
-</section>
+</div>
 
-<section class="section-schu">
-    <div class="div-schu">
-        <img class="img-schu" alt="img Schumacher" src="img/pilotos/schu.jpg " />
-        <aside class="aside-schu">
-            <h2 class="h2-schu">Michael Schumacher (The kaiser)<h3 class="h3-schu">"I've always believed that you should never, ever give up and you should always keep fighting even when there's only a slightest chance."</h3>
-            </h2>
-            <p class="p-schu">
-                He still polarises opinion, and there’s no question that he over-stepped the mark more often than was necessary. To put it mildly. But Michael Schumacher remains an
-                all-time great and not just because he won seven world championships, 91 races and smashed every record there was to smash. Or that he possessed the Senna-like ability to
-                drive his car right on the limit, while being physically fit and intelligent enough to keep a good chunk of his mental firepower in reserve to manage tricky pit-wall calls.
-            </p>
-        </aside>
-        <div class="reset"></div>
+<div class="row justify-content-center align-items-center my-3 mx-2" style="border: 1px solid black;">
+    <div class="col-md-3">
+        <div class="div-fangio text-center">
+            <img class="img-fangio" width="150" height="170" alt="img Fangio" src="img/pilotos/fangio.png " />
+        </div>
     </div>
-</section>
+    <div class="col-md-9">
+        <section class="section-fangio">
+            <aside class="aside-fangio">
+                <h2 class="h2-fangio">Juan Manuel Fangio (El Maestro)<h3 class="h3-fangio">"You need great passion, because everything you do with great pleasure, you do well."</h3>
+                </h2>
+                <p class="p-fangio">
+                    He won five world championships in the 1950s, not an era renowned for safety. He did it for four different teams – Alfa Romeo, Ferrari, Mercedes-Benz and Maserati – driving some of
+                    the most genuinely iconic racing cars in the history of the sport, and finished second twice. And while those were different times and far fewer races were run, Fangio’s hit rate is
+                    still extraordinary: 29 pole positions, 48 front row starts, 24 victories, from 51 championship Grands Prix starts.
+                    He was 46 when he won his last title, in 1957, a testament to his immense physical strength.
+                </p>
+            </aside>
+        </section>
+    </div>
+</div>
+
+
+
+
+
+<div class="row justify-content-center align-items-center my-3 mx-2" style="border: 1px solid red;">
+    <div class="col-md-9">
+        <section class="section-schu">
+
+            <aside class="aside-schu">
+                <h2 class="h2-schu">Michael Schumacher (The kaiser)<h3 class="h3-schu">"I've always believed that you should never, ever give up and you should always keep fighting even when there's only a slightest chance."</h3>
+                </h2>
+                <p class="p-schu">
+                    He still polarises opinion, and there’s no question that he over-stepped the mark more often than was necessary. To put it mildly. But Michael Schumacher remains an
+                    all-time great and not just because he won seven world championships, 91 races and smashed every record there was to smash. Or that he possessed the Senna-like ability to
+                    drive his car right on the limit, while being physically fit and intelligent enough to keep a good chunk of his mental firepower in reserve to manage tricky pit-wall calls.
+                </p>
+            </aside>
+            </section>
+    </div>
+    <div class="col-md-3">
+        <div class="div-schu text-center">
+            <img class="img-schu" width="150" alt="img Schumacher" src="img/pilotos/schu.jpg " />
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
 
 <?php
 include 'layouts/footer.php';
