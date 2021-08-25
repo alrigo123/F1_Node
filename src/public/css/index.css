@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.head{
+    background-color: rgb(5, 79, 102);
+}
+.header-container {
+  height: 90px;
+}
+/* change media to responsive */
+.navegacion {
+  outline: 10px solid red;
+  width: 50%;
+  border-radius: 2.8em;
+  background-color:rgb(223, 223, 223) !important;
+  margin: auto;
+  text-align: center;
+}
+.navigation{
+  outline: 10px solid yellow;
+}
+.m{
+color:red !important;
+font-style: italic;
+}
+.foot{
+  background-color:gray;
+}
+
+
+/* index.html */
+.intro{
+  background-color:rgb(223, 223, 223);
+  border-radius:1.6rem;
+}
+.img-site-f1{
+  border-radius:.6rem;
+}

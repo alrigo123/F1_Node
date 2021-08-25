@@ -1,224 +1,108 @@
-<body>
-    <div class="div">
-        <header>
-            <div class="title">
-                <a href="index.html" target="_top"><img class="imag" alt="Web F1 principal" src="img/logo/logo-main.jpg "/></a>
-                <aside class="aside-t"> Posiciones F1 Temporada 2020</aside>
-                <div class="reset"></div>
-              </div>
+
+           <!-- Ferrari -->
            
-           </header>
-           <div class="div__menu">
-            <nav class="menu">
-                <ul class="ul">
-                    <i class="fas fa-user"></i>
-                    <li class="nd"><a class="nd" href="Autor.html" target="_top">Autor</a></li>
-                    <li></li>
-                    <i class="fas fa-users"></i>
-                    <li class="nd"><a class="nd" href="Pilotos.html" target="_top">Pilotos</a></li>
-                    <li></li>
-                    <i class="fa fa-list" aria-hidden="true"></i>
-                    <li class="nd"><a class="nd" href="Posiciones.html" target="_top">Posiciones</a></li>
-                    <li></li>
-                    <i class="fab fa-teamspeak"></i>
-                    <li class="nd"><a class="nd" href="Equipos.html" target="_top">Equipos</a></li>
-                    <li></li>
-                    <i class="fas fa-sign-in-alt"></i>
-                    <li class="nd"><a class="nd" href="login.html" target="_top">Log In</a></li>
-                    <li></li>
-                    <i class="fas fa-user-plus"></i>
-                    <li class="nd"><a class="nd" href="signup.html" target="_top">Sing Up</a></li>
+           <!-- Fin Ferrari -->
+           <!-- Red Bull -->
+           <div class="div-red">
+            <div class="up-red">
+                <a href="redbull.html" target="_top"><img class="img-log-red" alt="Red Bull" src="img/logo/logo-redbull.jpg "/></a>
+
+             <aside class="aside-red">
+                <a class="title-red" href="redbull.html" target="_self">
+                    Aston Martin Red Bull Racing</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
         </div>
-            </nav>
-        <table>
-            <tr>
-                <th class="pos">Pos</th>
-                <th class="color" colspan="2">Apellido</th>
-                <th>Nombre</th>
-                <th colspan="2">Nacionalidad</th>
-                <th class="equipo">Equipo</th>
-                <th class="th-1">Puntos</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td colspan="2"><i id="i-mer" class="fa fa-square" aria-hidden="true"></i>Hamilton</td>
-                <td>Lewis</td>
-                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/grb.png"><aside>GBR</aside></td>
-                <td>MERCEDES BENZ PETRONAS</td>
-                <td>307</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td colspan="2"><i id="i-mer" class="fa fa-square" aria-hidden="true"></i>Bottas</td>
-                <td>Valtteri</td>
-                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/fin.svg"><aside>FIN</aside></td>
-                <td>MERCEDES BENZ PETRONAS</td>
-                <td>197</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td colspan="2"><i id="i-rb" class="fa fa-square" aria-hidden="true"></i>Verstappen</td>
-                <td>Max</td>
-                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/hol.svg"><aside>HOL</aside></td>
-                <td>ASTON MARTIN RED BULL RACING HONDA</td>
-                <td>170</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td colspan="2"><i id="i-rp" class="fa fa-square" aria-hidden="true"></i>Pérez</td>
-                <td>Sergio</td>
-                <td colspan="2"><img class="img-flag" alt="MEX" src="img/flag/mex.svg"><aside>MEX</aside></td>
-                <td>RACING POINT BWT MERCEDES</td>
-                <td>100</td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td colspan="2"><i id="i-fe" class="fa fa-square" aria-hidden="true"></i>Leclerc</td>
-                <td>Charles</td>
-                <td colspan="2"><img class="img-flag" alt="MON" src="img/flag/mon.svg"><aside>MON</aside></td>
-                <td>SCUDERIA FERRARI</td>
-                <td>97</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td colspan="2"><i id="i-re" class="fa fa-square" aria-hidden="true"></i>Ricciardo</td>
-                <td>Daniel</td>
-                <td colspan="2"><img class="img-flag" alt="AUS" src="img/flag/aus.svg"><aside>AUS</aside></td>
-                <td>RENAULT</td>
-                <td>96</td>
-            </tr>
-            <tr>
-                <td>7</td>           
-                <td colspan="2"><i id="i-mc" class="fa fa-square" aria-hidden="true"></i>Sainz Jr.</td>
-                <td>Carlos</td>
-                <td colspan="2"><img class="img-flag" alt="ESP" src="img/flag/esp.png"><aside>ESP</aside></td>
-                <td>MCLAREN RENAULT</td>
-                <td>75</td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td colspan="2"><i id="i-mc" class="fa fa-square" aria-hidden="true"></i>Norris</td>
-                <td>Lando</td>
-                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/grb.png"><aside>GBR</aside></td>
-                <td>MCLAREN RENAULT</td>
-                <td>74</td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td colspan="2"><i id="i-rb" class="fa fa-square" aria-hidden="true"></i>Albon</td>
-                <td>Alexander</td>
-                <td colspan="2"><img class="img-flag" alt="THA" src="img/flag/tha.svg"><aside>THA</aside></td>
-                <td>ASTON MARTIN RED BULL RACING HONDA</td>
-                <td>70</td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td colspan="2"><i id="i-ap" class="fa fa-square" aria-hidden="true"></i>Gasly</td>
-                <td>Pierre</td>
-                <td colspan="2"><img class="img-flag" alt="FRA" src="img/flag/fra.svg"><aside>FRA</aside></td>
-                <td>ALPHATAURI HONDA</td>
-                <td>63</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td colspan="2"><i id="i-rp" class="fa fa-square" aria-hidden="true"></i>Stroll</td>
-                <td>Lance</td>
-                <td colspan="2"><img class="img-flag" alt="CAN" src="img/flag/can.svg"><aside>CAN</aside></td>
-                <td>RACING POINT BWT MERCEDES</td>
-                <td>59</td>
-            </tr>
-            <tr>
-                <td>12</td>
-                <td colspan="2"><i id="i-re" class="fa fa-square" aria-hidden="true"></i>Ocon</td>
-                <td>Esteban</td>
-                <td colspan="2"><img class="img-flag" alt="FRA" src="img/flag/fra.svg"><aside>FRA</aside></td>
-                <td>RENAULT</td>
-                <td>40</td>
-            </tr>
-            <tr>
-                <td>13</td>
-                <td colspan="2"><i id="i-fe" class="fa fa-square" aria-hidden="true"></i>Vettel</td>
-                <td>Sebastian</td>
-                <td colspan="2"><img class="img-flag" alt="GER" src="img/flag/ger.png"><aside>GER</aside></td>
-                <td>SCUDERIA FERRARI</td>
-                <td>33</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td colspan="2"><i id="i-ap" class="fa fa-square" aria-hidden="true"></i>Kvyat</td>
-                <td>Daniil</td>
-                <td colspan="2"><img class="img-flag" alt="RUS" src="img/flag/rus.svg"><aside>RUS</aside></td>
-                <td>ALPHATAURI HONDA</td>
-                <td>26</td>
-            </tr>
-            <tr>
-                <td>15</td>
-                <td colspan="2"><i id="i-rp" class="fa fa-square" aria-hidden="true"></i>Hülkenberg</td>
-                <td>Nico</td>
-                <td colspan="2"><img class="img-flag" alt="GER" src="img/flag/ger.png"><aside>GER</aside></td>
-                <td>RACING POINT BWT MERCEDES</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td colspan="2"><i id="i-al" class="fa fa-square" aria-hidden="true"></i>Giovinazzi</td>
-                <td>Antonio</td>
-                <td colspan="2"><img class="img-flag" alt="ITA" src="img/flag/ita.png"><aside>ITA</aside></td>
-                <td>ALFA ROMEO RACING FERRARI</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td colspan="2"><i id="i-al" class="fa fa-square" aria-hidden="true"></i>Räikkönen</td>
-                <td>Kimi</td>
-                <td colspan="2"><img class="img-flag" alt="FIN" src="img/flag/fin.svg"><aside>FIN</aside></td>
-                <td>ALFA ROMEO RACING FERRARI</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td colspan="2"><i id="i-ha" class="fa fa-square" aria-hidden="true"></i>Grosjean</td>
-                <td>Romain</td>
-                <td colspan="2"><img class="img-flag" alt="FRA" src="img/flag/fra.svg"><aside>FRA</aside></td>
-                <td>HAAS FERRARI</td>
-                <td>2</td>
-            </tr>
-            <tr>
-                <td>19</td>
-                <td colspan="2"><i id="i-ha" class="fa fa-square" aria-hidden="true"></i>Magnussen</td>
-                <td>Kevin</td>
-                <td colspan="2"><img class="img-flag" alt="DEN" src="img/flag/den.png"><aside>DEN</aside></td>
-                <td>HAAS FERRARI</td>
-                <td>1</td>
-            </tr>
-            <tr>
-                <td>20</td>
-                <td colspan="2"><i id="i-wi" class="fa fa-square" aria-hidden="true"></i>Latifi</td>
-                <td>Nicholas</td>
-                <td colspan="2"><img class="img-flag" alt="CAN" src="img/flag/can.svg"><aside>CAN</aside></td>
-                <td>WILLIAMS MERCEDES</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>21</td>
-                <td colspan="2"><i id="i-wi" class="fa fa-square" aria-hidden="true"></i>Russell</td>
-                <td>George</td>
-                <td colspan="2"><img class="img-flag" alt="GBR" src="img/flag/grb.png"><aside>GBR</aside></td>
-                <td>WILLIAMS MERCEDES</td>
-                <td>0</td>
-            </tr>
-        </table>
-      
-<footer>
-    Comentarios (0)
-</footer>
-        <footer class="foot">
-            <time datetime="13-10-2020">Creado y Publicado 13-10-2020</time> 
-            <p></p>
-            &copy; Derechos reservados 2020
-        </footer>
+           <!-- Fin Red Bull -->
+           <!-- Mclaren -->
+        <div class="div-mcl">
+            <div class="up-mcl">
+                <a href="mclaren.html" target="_top"><img class="img-log-mcl" alt="Mclaren" src="img/logo/logo-mclaren.jpg "/></a>
 
-    </div>
+             <aside class="aside-mcl">
+                <a class="title-mcl" href="mclaren.html" target="_self">
+                    Mclaren Renault</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
+        </div>  
+           <!-- Fin Mclaren -->
+           <!-- Racing Point -->
+        <div class="div-rac">
+            <div class="up-rac">
+                <a href="racing.html" target="_top"><img class="img-log-rac" alt="Racing Point" src="img/logo/logo-racing.png "/></a>
+
+             <aside class="aside-rac">
+                <a class="title-rac" href="racing.html" target="_self">
+                    Racing Point BWT Mercedes</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
+        </div>
+          <!-- Fin Racing Point  -->
+          <!-- Renault -->
+        <div class="div-ren">
+            <div class="up-ren">
+                <a href="renault.html" target="_top"><img class="img-log-ren" alt="Renault"" src="img/logo/logo-renault.jfif "/></a>
+
+             <aside class="aside-ren">
+                <a class="title-ren" href="renault.html" target="_self">
+                    Renault</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
+        </div>
+          <!-- Fin Renault -->
+          <!-- Alpha Tauri -->
+        <div class="div-alp">
+            <div class="up-alp">
+                <a href="alpha.html" target="_top"><img class="img-log-alp" alt="Alpha Tauri" src="img/logo/logo-alpha.jpg "/></a>
+
+             <aside class="aside-alp">
+                <a class="title-alp" href="alpha.html" target="_self">
+                    Alpha Tauri</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
+        </div>
+          <!-- Fin Alpha Tauri -->
+          <!-- Alfa Romeo -->
+        <div class="div-alf">
+            <div class="up-alf">
+                <a href="alfa.html" target="_top"><img class="img-log-alf" alt="Alfa Romeo" src="img/logo/logo-alfa.png "/></a>
+
+             <aside class="aside-alf">
+                <a class="title-alf" href="alfa.html" target="_self">
+                    Alfa Romeo</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
+        </div>
+          <!-- Fin Alfa Romeo -->
+          <!-- Haas -->
+        <div class="div-haa">
+            <div class="up-haa">
+                <a href="haas.html" target="_top"><img class="img-log-haa" alt="Haas" src="img/logo/logo-haas.png "/></a>
+
+             <aside class="aside-haa">
+                <a class="title-haa" href="haas.html" target="_self">
+                    Haas</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
+        </div>
+          <!-- Fin Haas -->
+          <!-- Williams -->
+        <div class="div-wil">
+            <div class="up-wil">
+                <a href="williams.html" target="_top"><img class="img-log-wil" alt="Williams" src="img/logo/logo-williams.png "/></a>
+
+             <aside class="aside-wil">
+                <a class="title-wil" href="williams.html" target="_self">
+                    Williams</a>
+             </aside>
+                <div class="reset"></div>
+            </div>
+        </div>
     
-
-</body>

@@ -40,8 +40,8 @@
                     <div class="navbar-nav mx-auto">
                         <a class="nav-link active m" aria-current="page" href="./autor.php"><i id="icon" class="fa fa-user-circle-o" aria-hidden="true"></i>Autor</a>
                         <a class="nav-link active m" aria-current="page" href="./pilotos.php"><i class="fas fa-users"></i>Pilotos</a>
-                        <a class="nav-link active m" aria-current="page" href="#"><i class="fas fa-th"></i>Posiciones</a>
-                        <a class="nav-link active m" aria-current="page" href="#"><i class="fab fa-teamspeak"></i>Equipos</a>
+                        <a class="nav-link active m" aria-current="page" href="./"><i class="fas fa-th"></i>Posiciones</a>
+                        <a class="nav-link active m" aria-current="page" href="./teams.php"><i class="fab fa-teamspeak"></i>Equipos</a>
                         <a class="nav-link active m" aria-current="page" href="#"><i class="fas fa-sign-in-alt"></i>Log In</a>
                         <a class="nav-link active m" aria-current="page" href="#"><i class="fas fa-user-plus"></i>Sign Up</a>
                     </div>
