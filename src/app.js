@@ -7,7 +7,7 @@ const myConnection = require('express-myconnection');
 const colors = require('colors');
 const app= express();
 const MongoClient = require('mongodb').MongoClient;
-const index = require('./routes/index') , autor = require('./routes/autor')
+const index = require('./routes/index') , autor = require('./routes/autor'), pilot = require('./routes/pilot')
 //settings
 app.set('port',process.env.PORT || 2828);
 //template which we are gonna work
@@ -35,6 +35,7 @@ const con = new MongoClient(uri,{useNewParsers:true});
 //routes
 app.get('/', index);
 app.get('/autor', autor);
+app.get('/pilot', pilot);
 
 
 
