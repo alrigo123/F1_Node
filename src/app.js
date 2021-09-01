@@ -7,7 +7,8 @@ const myConnection = require('express-myconnection');
 const colors = require('colors');
 const app= express();
 const MongoClient = require('mongodb').MongoClient;
-const index = require('./routes/index') , autor = require('./routes/autor'), pilot = require('./routes/pilot')
+const index = require('./routes/index') 
+const controller = require('./controllers/pilotcontroller')
 //settings
 app.set('port',process.env.PORT || 2828);
 //template which we are gonna work
@@ -16,6 +17,22 @@ app.set('views',path.join(__dirname,'views'))
 
 //static
 app.use(express.static(path.join(__dirname, 'public')))
+
+app.use(morgan('dev'))
+
+
+//BD
+
+app.use(myConnection(
+  mysql,{
+    host:'localhost',
+    user: 'root',
+    password: '',
+    port : '3306',
+    database : 'formula'
+  },
+  'single',
+),)
 
 /* MONGO 
 //connection string
@@ -33,9 +50,9 @@ const con = new MongoClient(uri,{useNewParsers:true});
 
     */
 //routes
-app.get('/', index);
-app.get('/autor', autor);
-app.get('/pilot', pilot);
+
+
+app.use('/', index);
 
 
 
