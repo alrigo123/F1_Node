@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+.box{
+  border: 10px none yellow;
+  width: 95%;
+}
 .head{
     background-color: rgb(5, 79, 102);
 }
@@ -32,11 +36,13 @@ font-size: 16.3px;
   color: rgba(0, 47, 122, 0.849);
 }
 .foot{
-  background-color:gray;
+  background-color:#212529;
+  color: #fff;
 }
 
 
-/* index.html */
+
+/* index */
 .intro{
   background-color:rgb(223, 223, 223);
   border-radius:1.6rem;
@@ -48,4 +54,17 @@ font-size: 16.3px;
 }
 .info{
   background: #fff;
+  border-radius: 1rem;
 }
+.aside{
+  margin-left: 20px;
+}
+.aside1{
+  border-radius: 1.2em;  
+  border: 3px dashed #000;
+  padding:4px;
+  background: #a0a0a0;
+}
+
+
+/* Autor */
