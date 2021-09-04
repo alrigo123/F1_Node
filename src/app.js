@@ -21,19 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(morgan('dev'))
 
 
-//BD
-
-app.use(myConnection(
-  mysql,{
-    host:'localhost',
-    user: 'root',
-    password: '',
-    port : '3306',
-    database : 'formula'
-  },
-  'single',
-),)
-
 /* MONGO 
 //connection string
 const uri = 'mongodb://localhost/formula';

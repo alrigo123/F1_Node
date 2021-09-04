@@ -1,8 +1,9 @@
+let conex = require('../config/conexion');
+
 const controller = {}
 
 controller.list = (req,res)=>{
-    req.getConnection((err,conn)=>{
-        conn.query('select * from pilot',(err,pilots)=>{
+        conex.query('select * from pilot',(err,pilots)=>{
             if(err){
                 res.json(err)
             }
@@ -11,7 +12,7 @@ controller.list = (req,res)=>{
                 data : pilots
             });
         })
-    })
+   
 }
 
 
