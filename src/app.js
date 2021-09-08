@@ -8,7 +8,8 @@ const colors = require('colors');
 const app= express();
 const MongoClient = require('mongodb').MongoClient;
 const index = require('./routes/index') 
-const controller = require('./controllers/pilotcontroller')
+const polka = require('polka')
+const server = polka()
 //settings
 app.set('port',process.env.PORT || 2828);
 //template which we are gonna work
@@ -36,9 +37,10 @@ const con = new MongoClient(uri,{useNewParsers:true});
 
 
     */
+
+//midelwares , we can use multer ,and we have documentation about how to use 
+    
 //routes
-
-
 app.use('/', index);
 
 

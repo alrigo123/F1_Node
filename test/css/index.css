@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  border: 10px none yellow;
+  width: 95%;
+}
+.head {
+  background-color: rgb(5, 79, 102);
+}
+.header-container {
+  height: 90px;
+}
+/* change media to responsive */
+.navegacion {
+  outline: 10px none red;
+  width: 60%;
+  border-radius: 2.8em;
+  background-color: rgb(233, 233, 233) !important;
+  margin: auto;
+  text-align: center;
+}
+
+.navigation {
+  outline: 10px none yellow;
+}
+.m {
+  color: #000000 !important;
+  font-weight: 600;
+}
+.m:hover {
+  font-size: 16.3px;
+}
+.m i {
+  margin-right: 6px;
+  color: rgba(0, 47, 122, 0.849);
+}
+.foot {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* index */
+.intro {
+  background-color: rgb(223, 223, 223);
+  border-radius: 1.6rem;
+  font-size: 16px;
+  font-weight: 500;
+}
+.img-site-f1 {
+  border-radius: 0.6rem;
+}
+.info {
+  background: #fff;
+  border-radius: 1rem;
+  text-align: justify;
+  padding : 35px;
+}
+.aside {
+  margin-left: 20px;
+}
+.aside1 {
+  border-radius: 1.2em;
+  border: 3px dashed #000;
+  padding: 4px;
+  background: #a0a0a0;
+}
+
+/* Autor */
+
+
+/* Pilots */
+.div-pilot{
+  border: 3px none blue !important;
+  border-radius: 30px;
+  background: #e1c699;
+  padding : 20px;
+}
+.section-senna{
+  border: 5px none green;
+  background: #e1c699;
+  padding : 18px;
+  border-radius: 15px;
+}
+.p-senna{
+  text-align: justify;
+}
+.img-senna{
+  border: 2px dashed #000;
+  border-radius: 20px;
+  width:200px;
+}
+
+
+/* Responsive designs */
+@media only screen and (max-width: 990px) {
+  .navegacion {
+    top: 70px;
+    max-height: inherit;
+    position: relative;
+    right: 10px;
+    width: 40%;
+    background: transparent;
+  }
+  /* index */
+  .intro {
+    margin-top: 70px;
+  }
+}
