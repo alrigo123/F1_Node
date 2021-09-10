@@ -14,6 +14,14 @@ router.get('/pilot',(req,res)=>{
     res.render('pilot', {title : 'Pilot from this website'})
 })
 
+router.get('/listPilot',(req,res)=>{
+    res.render('./templates/listPilot', {title : 'Pilots to edit'});
+});
+
+router.get('/newPilot', (req, res) => {
+res.render('./templates/newPilot',{title : 'New Pilots to add'})
+});
+
 router.get('/position',controller.list)
 
 module.exports = router

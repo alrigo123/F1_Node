@@ -15,29 +15,15 @@ app.set('port',process.env.PORT || 2828);
 //template which we are gonna work
 app.set('view engine','ejs')
 app.set('views',path.join(__dirname,'views'))
-
 //static
 app.use(express.static(path.join(__dirname, 'public')))
 
+
+//middlewares  falta multer y otrs maasxdxdxd
 app.use(morgan('dev'))
 
-
-/* MONGO 
-//connection string
-const uri = 'mongodb://localhost/formula';
-const con = new MongoClient(uri,{useNewParsers:true});
-    //if connection true
-    con.connect(err => {
-        //define table
-        const pilots = con.db("formula").collection('pilot');
-
-        //Insert data pilot 
-     //   let pilot = {id = 1 , name = "Lewis" , last_name = "Hamilton", country: "United Kingdom", age : "30", points:"130", photo:"lewis.jpg", id_team : "1"}
-    })
-
-
-    */
-
+app.use(express.urlencoded({extended : false}));
+app.use(express.json());
 //midelwares , we can use multer ,and we have documentation about how to use 
     
 //routes
