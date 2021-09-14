@@ -1,5 +1,5 @@
 <%- include ('../layouts/header.ejs') %>
-    <input type="submit" value="ADD PILOT" class="btn btn-primary mt-2">
+        <a href="./newPilot" class="btn btn-primary mt-2" role="button">ADD PILOT</a>
     <br>
     <br>
     <table class="table table-bordered table-responsive table-dark table-hover">
@@ -26,8 +26,8 @@
                     <td class="text-center"><%= data[i].country_pilot %> </td>
                     <td class="text-center"><%= data[i].name_team %></td>
                     <td class="text-center"><%= data[i].points %></td>
-                    <td><a href="" class="btn btn-danger">Delete</a>
-                        <a href="" class="btn btn-success">Update</a>
+                    <td><a href="/deletePilot/<%= data[i].id_pilot %>" class="btn btn-danger">Delete</a>
+                        <a href="/editPilot/<%= data[i].id_pilot %>" class="btn btn-success">Update</a>
                     </td>
                 </tr>
 

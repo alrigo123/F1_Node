@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 //middlewares  falta multer y otrs maasxdxdxd
-app.use(morgan('dev'))
+app.use(morgan('dev'));
 
 app.use(express.urlencoded({extended : false}));
 app.use(express.json());
