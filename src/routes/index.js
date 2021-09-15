@@ -15,11 +15,14 @@ router.get('/position',controllerBD.list)
 router.get('/listPilot', controllerBD.listControl);
 
 //crear un controller para tener con bd
-router.get('/newPilot', (req, res) => {res.render('./templates/newPilot',{title : 'New Pilots to add'})});
+router.get('/newPilot', controllerBD.team);
 router.post('/newPilot', dataController.add)
 
 
-router.get('/editPilot/:id',dataController.edit)
-router.post('/editPilot/:id', dataController.update)
+router.get('/editPilot/:id',dataController.edit);
+router.post('/editPilot/:id', dataController.update);
+
+
+router.get('/deletePilot/:id',dataController.delete);
 
 module.exports = router;

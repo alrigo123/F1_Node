@@ -2,6 +2,23 @@ let conex = require('../config/conexion')
 
 const controller = {}
 
+//to show names of teams
+controller.team = (req, res)=>{
+  conex.query('SELECT id_team,name_team FROM team',
+(err,teams)=>{
+  if(err) {return  res.json(err);}
+else{
+  res.render('./templates/newPilot', {
+    title: "algo sera",
+    equipos : teams
+  })
+}
+})
+}
+
+
+
+
 //to show the pilots in the query
 controller.list = (req, res) => {
   conex.query('select * from pilot order by points desc', (err, pilots) => {
@@ -14,6 +31,9 @@ controller.list = (req, res) => {
     })
   })
 }
+
+
+
 controller.listControl = (req, res) => {
   [
     conex.query(
