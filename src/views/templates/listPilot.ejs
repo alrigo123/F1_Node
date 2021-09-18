@@ -1,39 +1,55 @@
 <%- include ('../layouts/header.ejs') %>
-        <a href="./newPilot" class="btn btn-primary mt-2" role="button">ADD PILOT</a>
+    <a href="./newPilot" class="btn btn-primary mt-2" role="button">ADD PILOT</a>
     <br>
     <br>
-    <table class="table table-bordered table-responsive table-dark table-hover">
-        <thead class="thead-default thead-light">
-            <tr class="text-center">
-                <th scope="col">Pos</th>
-                <th>Nick</th>
-                <th>Name</th>
-                <th>Last Name</th>
-                <th>Country</th>
-                <th>Team</th>
-                <th>Points</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <% for( let i=0; i < data.length; i++ ) { %>
-                
+    <div id="div1">
+        <table class="table table-bordered table-responsive table-dark table-hover">
+            <thead class="thead-default thead-light">
                 <tr class="text-center">
-                    <td class="text-center" scope="row"><%= i+1 %> </td>
-                    <td class="text-center"><%= data[i].nick %> </td>
-                    <td class="text-center"><%= data[i].name_pilot %> </td>
-                    <td class="text-center"><%= data[i].last_name %></td>
-                    <td class="text-center"><%= data[i].country_pilot %> </td>
-                    <td class="text-center"><%= data[i].name_team %></td>
-                    <td class="text-center"><%= data[i].points %></td>
-                    <td><a href="/deletePilot/<%= data[i].id_pilot %>" class="btn btn-danger">Delete</a>
-                        <a href="/editPilot/<%= data[i].id_pilot %>" class="btn btn-success">Update</a>
-                    </td>
+                    <th scope="col">Pos</th>
+                    <th>Nick</th>
+                    <th>Name</th>
+                    <th>Last Name</th>
+                    <th>Country</th>
+                    <th>Team</th>
+                    <th>Points</th>
+                    <th>Actions</th>
                 </tr>
+            </thead>
+            <tbody>
+                <% for( let i=0; i < data.length; i++ ) { %>
 
-                <% } %>
-        </tbody>
-    </table>
+                    <tr class="text-center">
+                        <td class="text-center" scope="row">
+                            <%= i+1 %>
+                        </td>
+                        <td class="text-center">
+                            <%= data[i].nick %>
+                        </td>
+                        <td class="text-center">
+                            <%= data[i].name_pilot %>
+                        </td>
+                        <td class="text-center">
+                            <%= data[i].last_name %>
+                        </td>
+                        <td class="text-center">
+                            <%= data[i].country_pilot %>
+                        </td>
+                        <td class="text-center">
+                            <%= data[i].name_team %>
+                        </td>
+                        <td class="text-center">
+                            <%= data[i].points %>
+                        </td>
+                        <td><a href="/deletePilot/<%= data[i].id_pilot %>" class="btn btn-danger">Delete</a>
+                            <a href="/editPilot/<%= data[i].id_pilot %>" class="btn btn-success">Update</a>
+                        </td>
+                    </tr>
 
+                    <% } %>
+            </tbody>
+        </table>
+
+    </div>
 
     <%- include ('../layouts/footer.ejs') %>

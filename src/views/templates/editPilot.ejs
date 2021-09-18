@@ -7,8 +7,8 @@
                 <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
                     <div class="card">
                         <h5 class="text-center mb-4">Add New Pilot to F1</h5>
-                        <form class="form-card" action="/editPilot"
-                            method="post">
+                        <form class="form-card" action="/editPilot/<%= data.id_pilot %> "
+                            method="post" enctype="multipart/form-data">
                             <div class="row justify-content-between text-start" style="border: 1px none blue;">
                                
                                     <div class="form-group col-sm-6 flex-column d-flex"> 
@@ -50,7 +50,10 @@
                                 <div class="form-group col-sm-6 flex-column d-flex">
                                     <label class="form-control-label px-3">Team<span class="text-danger">
                                             *</span></label><select id="team" name="id_team" class="select" onblur="validate(3)">
-                                           
+                                                <% for( let i = 0; i < equipos.length; i++ ) { %>
+                                                
+                                                    <option value="<%= equipos[i].id_team %>"><%= equipos[i].name_team %></option>
+                                                    <% } %>
                                     </select>
                                 </div>
 
@@ -65,7 +68,7 @@
                             <div class="row justify-content-between text-start mt-3">
                                 <div class="form-group col-sm-10 flex-column d-flex"> <label
                                         class="form-control-label px-3">Photo<span class="text-danger">
-                                            *</span></label> <input type="file" id="photo" name="photo" value="<%= data.photo_pilot%>"
+                                            *</span></label> <input type="file" id="photo_pilot" name="photo_pilot" value="<%= data.photo_pilot%>"
                                         onblur="validate(5)"> </div>
                             </div>
 

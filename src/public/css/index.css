@@ -68,7 +68,6 @@
 }
 
 /* Autor */
-
 .color-white {
   color: #fff;
 }
@@ -173,20 +172,22 @@
   width: 200px;
 }
 
+/* List Pilot */
+
 /* new pilot - Edit Pilot */
 .card {
   padding: 20px 30px;
   margin-bottom: 60px;
-  border-radius:15px;
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+  border-radius: 15px;
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
 }
 
 .blue-text {
-  color: #00BCD4
+  color: #00bcd4;
 }
 
 .form-control-label {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 input,
@@ -198,7 +199,7 @@ button {
   box-sizing: border-box;
   border: 1px solid #ccc;
   font-size: 18px !important;
-  font-weight: 300
+  font-weight: 300;
 }
 
 input:focus,
@@ -206,9 +207,9 @@ textarea:focus {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  border: 1px solid #00BCD4;
+  border: 1px solid #00bcd4;
   outline-width: 0;
-  font-weight: 400
+  font-weight: 400;
 }
 
 .btn-block {
@@ -216,30 +217,29 @@ textarea:focus {
   font-size: 15px !important;
   font-weight: 400;
   height: 43px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .btn-block:hover {
-  color: #fff !important
+  color: #fff !important;
 }
 
 button:focus {
   -moz-box-shadow: none !important;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  outline-width: 0
+  outline-width: 0;
 }
 
-.select{
+.select {
   border: 1px solid #ccc;
   margin-top: 2.5%;
   height: 43px;
   border-radius: 5px;
 }
-.select:focus{
-  border: 1px solid #00BCD4;
+.select:focus {
+  border: 1px solid #00bcd4;
 }
-
 
 /* Responsive designs */
 @media only screen and (max-width: 990px) {
@@ -271,5 +271,10 @@ button:focus {
   /* new pilot */
   .card {
     margin-top: 20px;
+  }
+  /* List Pilots*/
+  #div1 {
+    overflow: scroll;
+    width: 100%;
   }
 }
