@@ -34,7 +34,7 @@ app.use(
     storage : storage,
     dest: path.join(__dirname, './public/img/uploads'),
     limits: { filesize: 10000 },
-    fileFilter: (req, file, cb, err) => {
+    fileFilter:  (req, file, cb, err) => {
       const filetype = /jpeg|jpg|png|gif/
       const mimetype = filetype.test(file.mimetype)
       const extname = filetype.test(path.extname(file.originalname))

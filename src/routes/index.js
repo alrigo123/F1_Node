@@ -2,12 +2,12 @@ const express = require('express');
 const router = express.Router();
 const controllerBD = require('../controllers/pilotcontroller');
 const dataController = require('../controllers/datacontroller')
+const viewController = require('../controllers/c_views')
+router.get('/', viewController.index)
 
-router.get('/', (req,res)=>{res.render('index', {title: 'Formula 1 en Español El mas Grande de Peru'});})
+router.get('/autor', viewController.autor )
 
-router.get('/autor', (req,res)=>{res.render('autor', {title : 'Autor from this website'})})
-
-router.get('/pilot',(req,res)=>{res.render('pilot', {title : 'Pilot from this website'})})
+router.get('/pilot',viewController.pilot)
 
 
 router.get('/position',controllerBD.list)
@@ -24,5 +24,11 @@ router.post('/editPilot/:id', dataController.update);
 
 
 router.get('/deletePilot/:id',dataController.delete);
+
+//Login Route
+router.get('/login', viewController.log)
+
+router.get('/register',viewController.reg )
+
 
 module.exports = router;

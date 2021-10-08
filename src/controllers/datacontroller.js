@@ -6,8 +6,8 @@ const controller = {}
 controller.delete = (req, res) => {
   const { id } = req.params
   console.log(req.params)
-  conex.query('DELETE FROM pilot where id_pilot = ?', [id], (err, pilot) => {
-    res.redirect('/listPilot')
+  conex.query('DELETE FROM pilot where id_pilot = ?', [id], async(err, pilot) => {
+   await res.redirect('/listPilot')
     console.log(pilot)
   })
 }
@@ -20,12 +20,12 @@ controller.edit = (req, res) => {
   conex.query(
     'select * from pilot where id_pilot = ?',
     [id],
-    async (err, pilot) => {
+    (err, pilot) => {
       if (err) throw err
       conex.query('SELECT id_team,name_team FROM team', async (err, teams) => {
         if (err) throw err
 
-        res.render('./templates/editPilot', {
+        await res.render('./templates/editPilot', {
           //porque cusotmer es arreglo
           title: 'hola',
           data: pilot[0],
@@ -43,8 +43,8 @@ controller.update = (req, res) => {
   conex.query(
     'UPDATE pilot set ? where id_pilot = ?',
     [newPilot, id],
-    (err, rows) => {
-      res.redirect('/listPilot')
+    async(err, rows) => {
+      await res.redirect('/listPilot')
     },
   )
 }
@@ -57,14 +57,17 @@ controller.add = (req, res) => {
 
   const data = req.body
   //console.log("esta es la dataaaaa",data)
-  conex.query('INSERT INTO pilot set ?', [data], (err, pilot) => {
+  conex.query('INSERT INTO pilot set ?', [data], async(err, pilot) => {
     if (err) {
       throw err
     } else {
       console.log(pilot)
-      res.redirect('/listPilot')
+      await  res.redirect('/listPilot')
     }
   })
 }
+
+
+
 
 module.exports = controller
