@@ -3,6 +3,8 @@ const router = express.Router();
 const controllerBD = require('../controllers/pilotcontroller');
 const dataController = require('../controllers/datacontroller')
 const viewController = require('../controllers/c_views')
+const authController = require('../controllers/c_auth')
+
 router.get('/', viewController.index)
 
 router.get('/autor', viewController.autor )
@@ -27,8 +29,10 @@ router.get('/deletePilot/:id',dataController.delete);
 
 //Login Route
 router.get('/login', viewController.log)
+router.post('/login', authController.login)
 
+//Register route
 router.get('/register',viewController.reg )
-
+router.post('/register',authController.register);
 
 module.exports = router;

@@ -22,4 +22,5 @@ controller.reg = (req, res) => {
   res.render('./templates/register', { title: 'Register' })
 }
 
+
 module.exports = controller

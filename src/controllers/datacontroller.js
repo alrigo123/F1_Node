@@ -40,11 +40,14 @@ controller.edit = (req, res) => {
 controller.update = (req, res) => {
   const { id } = req.params
   const newPilot = req.body
+  //console.log({id}, newPilot);
   conex.query(
     'UPDATE pilot set ? where id_pilot = ?',
     [newPilot, id],
     async(err, rows) => {
-      await res.redirect('/listPilot')
+     // console.log(rows);
+      if(err) throw err.message;
+       await res.redirect('/listPilot')
     },
   )
 }

@@ -67,6 +67,35 @@
   background: #a0a0a0;
 }
 
+/* Login */
+.img-1 {
+  background-image: url('/img/2.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.img-2 {
+  background-image: url('/img/3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.img-3 {
+  background-image: url('/img/morado.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#arrow{
+  color:black;
+  border:1px solid red;
+  background-color: black;
+  height: 43px;
+  width:43px;
+}
+
+
+
+
 /* Autor */
 .color-white {
   color: #fff;
