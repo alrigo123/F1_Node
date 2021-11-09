@@ -17,12 +17,12 @@ const dotenv = require('dotenv')
 
 //deotenv config
 
-dotenv.config({path :'./env/.env'})
+dotenv.config({path:'./env/.env'})
 
 //middlewares  falta multer y otrs maasxdxdxd
 
 
-app.use(morgan('dev'))
+//app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
@@ -56,7 +56,6 @@ app.use(
 //template which we are gonna work
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
-
 //static
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -66,7 +65,6 @@ app.use('/', index)
 //cookies Parser
 app.use(cookieParser());
 
-//clean caché
 
 
 const PORT = process.env.PORT || 2828;

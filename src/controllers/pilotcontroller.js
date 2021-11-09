@@ -42,6 +42,4 @@ controller.listControl = (req, res) => {
   })
 }
 
-
-
 module.exports = controller

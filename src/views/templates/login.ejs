@@ -49,14 +49,22 @@
 							<input type="text" class="form-control bg-dark-x border-0" name="user"
 								placeholder="Ingresa tu email" aria-describedby="emailHelp">
 						</div>
+						<!-- com -->
 						<div class="mb-4">
 							<label class="form-label font-weight-bold text-white">Contraseña</label>
-							<input type="password" class="form-control bg-dark-x border-0 mb-2"
+							<input id="password-field" type="password" class="form-control bg-dark-x border-0 mb-2"
 								placeholder="Ingresa tu contraseña" name="pass">
-
-							<a href="" id="emailHelp" class="form-text text-muted text-decoration-none ">¿Has
-								olvidado tu contraseña?</a>
+							<div class="text-white">
+								<span toggle="#password-field"
+									class="fa fa-fw fa-eye field-icon toggle-password text-white ml-3"></span>  Mostrar Contraseña
+							</div>
 						</div>
+						<a href="" id="emailHelp" class="form-text text-muted text-decoration-none ">¿Has
+							olvidado tu contraseña?</a>
+
+
+
+
 						<button type="submit" class="btn btn-primary w-100">Iniciar sesión</button>
 					</form>
 
@@ -75,7 +83,19 @@
 			</div>
 		</div>
 	</section>
-	
+	<% if (alert) { %>
+		<script>
+			Swal.fire({
+				title: '<%= alertTitle%>',
+				text: '<%= alertMessage%>',
+				icon: '<%= alertIcon%>',
+				showConfirmButton: <%= showConfirmButton %>,
+				timer : <%= timer %>,
+            }).then(() => {
+					window.location = '/<%= ruta %>'
+				})
+		</script>
+		<% } %>
 
 
-		<%- include ('../layouts/footer.ejs') %>
+			<%- include ('../layouts/footer.ejs') %>

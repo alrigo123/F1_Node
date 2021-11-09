@@ -15,7 +15,7 @@ controller.pilot = (req, res) => {
 }
 
 controller.log = (req, res) => {
-  res.render('./templates/login', { title: 'Login' })
+  res.render('./templates/login', { title: 'Login' ,alert:false})
 }
 
 controller.reg = (req, res) => {

@@ -2,7 +2,10 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const conex = require('../config/conexion')
 const { promisify } = require('util')
+const path = require('path')
+const dotenv = require('dotenv')
 
+dotenv.config({ path: '../env/.env' })
 const controller = {}
 
 controller.register = async (req, res, next) => {
@@ -35,12 +38,24 @@ controller.login = async (req, res, next) => {
   try {
     const user = req.body.user
     const pass = req.body.pass
+    const key = process.env.JWT_SECRET_KEY
+    const a = process.env.PORT
+    const b = process.env.JWT_EXPIRE
+    const c = process.env.JWT_COOKIE_EXPIRE
+    if (key == undefined) {
+      console.log('Error de undefined ')
+    }
+    console.log(a, b, c, key, ' => ', user, pass)
     conex.query(
-      'SELECT * FROM user where user = ?',
+      'SELECT * FROM user WHERE user = ?',
       [user],
-      async (err, user) => {
-        if (user.length == 0 || !(await bcrypt.compare(pass, user[0].pass))) {
-          res.render('login', {
+      async (err, results) => {
+        if (
+          results.length === 0 ||
+          !(await bcrypt.compare(pass, results[0].pass))
+        ) {
+          res.redirect('login')
+          /* res.render('../',{
             alert: true,
             alertTitle: 'Error',
             alertMessage: 'Error de usuario',
@@ -48,18 +63,25 @@ controller.login = async (req, res, next) => {
             showConfirmButton: true,
             timer: false,
             ruta: 'login',
-          })
+          }) */
         } else {
-          const id = user[0].id
-          const token = jwt.sign({ id: id }, process.env.JWT_SECRET, {expiresIn: process.env.JWT_EXPIRE,})
+          const JWT_SECRET_KEY = 'keyalex'
+          const JWT_EXPIRE = '7D'
+          const JWT_COOKIE_EXPIRE = '90'
+          const id = results[0].id
+          const token = jwt.sign({ id: id }, JWT_SECRET_KEY, {
+            expiresIn: JWT_EXPIRE,
+          })
           console.log(`Token ${token} for the ${user} user`)
 
           const cookieOptions = {
-            expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000),
+            expires: new Date(
+              Date.now() + JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000,
+            ),
             httpOnly: true,
           }
-          res.cookie('jwt',token,cookieOptions)
-          res.render('login',{
+          res.cookie('jwt', token, cookieOptions)
+          res.render('login', {
             alert: true,
             alertTitle: 'Conexion exitosa',
             alertMessage: 'Login correcto',
@@ -67,7 +89,7 @@ controller.login = async (req, res, next) => {
             showConfirmButton: false,
             timer: 800,
             ruta: 'listPilot',
-          });
+          })
         }
       },
     )

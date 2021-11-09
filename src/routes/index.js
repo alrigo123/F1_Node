@@ -35,4 +35,6 @@ router.post('/login', authController.login)
 router.get('/register',viewController.reg )
 router.post('/register',authController.register);
 
+
+
 module.exports = router;
