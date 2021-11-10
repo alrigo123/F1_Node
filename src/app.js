@@ -12,20 +12,23 @@ const polka = require('polka')
 const server = polka()
 const multer = require('multer')
 const cookieParser = require('cookie-parser')
-const dotenv = require('dotenv')
-
+const config = require('./config/enviroment-variables')
 
 //deotenv config
 
-dotenv.config({path:'./env/.env'})
+require('dotenv').config()
+
+const PORTO = config.PORT
+const secret = config.JWT_SECRET_KEY
+const expire = config.JWT_EXPIRE;
+
+console.log(PORTO, secret, expire)
 
 //middlewares  falta multer y otrs maasxdxdxd
-
 
 //app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-
 
 //midelwares , we can use multer ,and we have documentation about how to use
 /*multer*/
@@ -63,15 +66,12 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', index)
 
 //cookies Parser
-app.use(cookieParser());
+app.use(cookieParser())
 
-
-
-const PORT = process.env.PORT || 2828;
+const PORT = process.env.PORT;
 
 //listen the server
-app.listen(PORT, (req, res) => {
-  console.log(`Hi Alex, Server is listening on port ${PORT}!!`)
+app.listen(PORTO, (req, res) => {
+  console.log(`Hi Alex, Server is listening on port ${PORTO}!!`);
 })
-
 
