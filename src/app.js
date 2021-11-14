@@ -20,7 +20,7 @@ require('dotenv').config()
 
 const PORTO = config.PORT
 const secret = config.JWT_SECRET_KEY
-const expire = config.JWT_EXPIRE;
+const expire = config.JWT_EXPIRE
 
 console.log(PORTO, secret, expire)
 
@@ -63,15 +63,21 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 //routes
+
+app.use((req, res) => {
+  if (res.status(404)) {
+    res.send('Error NO HAY APGINA');
+  }
+})
+
 app.use('/', index)
 
 //cookies Parser
 app.use(cookieParser())
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT
 
 //listen the server
 app.listen(PORTO, (req, res) => {
-  console.log(`Hi Alex, Server is listening on port ${PORTO}!!`);
+  console.log(`Hi Alex, Server is listening on port ${PORTO}!!`)
 })
-

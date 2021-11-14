@@ -14,7 +14,7 @@ controller.delete = (req, res) => {
 
 controller.edit = (req, res) => {
   const { id } = req.params
-  const aux = req.params.id_pilot
+  const aux = req.params.id_pilot 
   // console.log({ id_pilot }, req.params)
   //console.log(aux)
   conex.query(

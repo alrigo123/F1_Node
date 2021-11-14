@@ -1,6 +1,5 @@
 const controller = {}
 
-controller
 
 controller.index = (req, res) => {
   res.render('index', { title: 'Formula 1 en Español El mas Grande de Peru' })

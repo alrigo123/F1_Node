@@ -1,5 +1,6 @@
 const mysql = require('mysql');
 
+//Create data to connecto MySQL
 let conex = mysql.createConnection({
           host:'localhost',
           user: 'root',
@@ -7,6 +8,7 @@ let conex = mysql.createConnection({
           database : 'formula'
 });
 
+//Creating connection to mysql
 conex.connect((err)=>{
     if(!err){
        // console.log(conex.config.database)

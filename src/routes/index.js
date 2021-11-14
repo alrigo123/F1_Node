@@ -16,6 +16,7 @@ router.get('/position',controllerBD.list)
 
 router.get('/listPilot', controllerBD.listControl);
 
+
 //crear un controller para tener con bd
 router.get('/newPilot', controllerBD.team);
 router.post('/newPilot', dataController.add)
