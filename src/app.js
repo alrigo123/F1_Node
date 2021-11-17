@@ -63,13 +63,13 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 //routes
-
+/*
 app.use((req, res) => {
   if (res.status(404)) {
     res.send('Error NO HAY APGINA');
   }
 })
-
+*/
 app.use('/', index)
 
 //cookies Parser
