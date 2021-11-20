@@ -10,7 +10,7 @@ const MongoClient = require('mongodb').MongoClient
 const index = require('./routes/index')
 const polka = require('polka')
 const server = polka()
-const multer = require('multer')
+const multer = require('multer')  
 const cookieParser = require('cookie-parser')
 const config = require('./config/enviroment-variables')
 
@@ -22,7 +22,7 @@ const PORTO = config.PORT
 const secret = config.JWT_SECRET_KEY
 const expire = config.JWT_EXPIRE
 
-console.log(PORTO, secret, expire)
+console.log(PORTO, secret, expire)  
 
 //middlewares  falta multer y otrs maasxdxdxd
 

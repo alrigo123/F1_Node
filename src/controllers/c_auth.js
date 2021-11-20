@@ -5,6 +5,7 @@ const { promisify } = require('util')
 const path = require('path')
 const config = require('../config/enviroment-variables')
 const model = require('../model/pilot')
+const modelUser = require('../model/user.model')
 
 const controller = {}
 
@@ -22,46 +23,52 @@ controller.register = async (req, res, next) => {
     console.log(name_user, user, hashPass, pass)
 
     //make a query to mysql with the parameters equals to de database
-    conex.query('INSERT INTO user SET ?',{ name_user: name_user, user: user, pass: hashPass }, // BD atrivutos
-    //user is the param who get filled by the query
-    (err, user) => {
+    conex.query(
+      'INSERT INTO user SET ?',
+      { name_user: name_user, user: user, pass: hashPass }, // BD atrivutos
+      //user is the param who get filled by the query
+      (err, user) => {
         console.log(user)
-        if (err) {throw `Error if => ${err.message}` }
+        if (err) {
+          throw `Error if => ${err.message}`
+        }
 
-        res.redirect('/login')  // -> redirect manda a la url lo que esta en comillas , mientras que render busca en el directorio views
+        res.redirect('/login') // -> redirect manda a la url lo que esta en comillas , mientras que render busca en el directorio views
         //console.log(name_user,hashPass,pass);
-      })
-  } catch (error) {throw `Error catch => ${error.message}` }
+      },
+    )
+  } catch (error) {
+    throw `Error catch => ${error.message}`
+  }
 }
 
 //Function to log in a user
 //lg_jwt with session
-controller.login = async (req, res, next) => {
+controller.login = (req, res, next) => {
   try {
     //getting the data from form in login.js
     const user = req.body.user
     const pass = req.body.pass
 
-    //query to share and compare the data 
-    conex.query('SELECT * FROM user WHERE user = ?', [user],
-      async (err, results) => {
-        if (results.length === 0 || !(await bcrypt.compare(pass, results[0].pass))) {
-         /// console.log("Error de logeo");
-           res.render('./templates/login',{
-             title :"Login pero con error",
-            alert: true,
-            alertTitle: 'Error',
-            alertMessage: 'Error de usuario',
-            alertIcon: 'error',
-            showConfirmButton: true,
-            timer: false,
-            ruta: 'login',
-          }) 
-        } else {
-
-          model.listControl(conex, async (err, pilots) => {
-
-            const id = results[0].id
+    modelUser.get(conex, [user], async (err, results) => {
+      if (
+        results.length === 0 ||
+        !(await bcrypt.compare(pass, results[0].pass))
+      ) {
+        /// console.log("Error de logeo");
+        res.render('./templates/login', {
+          title: 'Login pero con error',
+          alert: true,
+          alertTitle: 'Error',
+          alertMessage: 'Error de usuario',
+          alertIcon: 'error',
+          showConfirmButton: true,
+          timer: false,
+          ruta: 'login',
+        })
+      } else {
+        model.listControl(conex, async (err, pilots) => {
+          const id = results[0].id
           const token = jwt.sign({ id: id }, config.JWT_SECRET_KEY, {
             expiresIn: config.JWT_EXPIRE,
           })
@@ -75,13 +82,13 @@ controller.login = async (req, res, next) => {
           }
           res.cookie('jwt', token, cookieOptions)
 
-            if (err) {
-              res.json(err)
-            }
-            await res.render('./templates/listPilot', {
-              title: 'Pilots from 2021 season',
-              data: pilots,
-              user : user,
+          if (err) {
+            res.json(err)
+          }
+          await res.render('./templates/listPilot', {
+            title: 'Pilots from 2021 season',
+            data: pilots,
+            user: user,
             alert: true,
             alertTitle: 'Conexion exitosa',
             alertMessage: 'Login correcto',
@@ -89,24 +96,26 @@ controller.login = async (req, res, next) => {
             showConfirmButton: false,
             timer: 800,
             ruta: 'listPilot',
-            })
           })
+        })
 
         /*
-          res.render('./templates/listPilot', {
-            title: 'Lista de Pilotos',
-            alert: true,
-            alertTitle: 'Conexion exitosa',
-            alertMessage: 'Login correcto',
-            alertIcon: 'success',
-            showConfirmButton: false,
-            timer: 800,
-            ruta: 'listPilot',
-          })
-          */
-        }
-      },
-    )
+        res.render('./templates/listPilot', {
+          title: 'Lista de Pilotos',
+          alert: true,
+          alertTitle: 'Conexion exitosa',
+          alertMessage: 'Login correcto',
+          alertIcon: 'success',
+          showConfirmButton: false,
+          timer: 800,
+          ruta: 'listPilot',
+        })
+        */
+      }
+    })
+
+    //query to share and compare the data
+    //conex.query('SELECT * FROM user WHERE user = ?', [user],)
   } catch (error) {
     throw `Error catching => ${error.message}`
   }

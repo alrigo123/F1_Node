@@ -3,11 +3,12 @@ let conex = require('../config/conexion')
 
 const controller = {}
 
-controller.delete = (req, res) => {
+controller.delete =async (req, res) => {
   const { id } = req.params
   console.log(req.params)
+  
   conex.query('DELETE FROM pilot where id_pilot = ?', [id], async(err, pilot) => {
-   await res.redirect('/listPilot')
+    res.redirect('/listPilot')
     console.log(pilot)
   })
 }
@@ -20,12 +21,12 @@ controller.edit = (req, res) => {
   conex.query(
     'select * from pilot where id_pilot = ?',
     [id],
-    (err, pilot) => {
+    async (err, pilot) => {
       if (err) throw err
-      conex.query('SELECT id_team,name_team FROM team', async (err, teams) => {
+      conex.query('SELECT id_team,name_team FROM team', (err, teams) => {
         if (err) throw err
 
-        await res.render('./templates/editPilot', {
+        res.render('./templates/editPilot', {
           //porque cusotmer es arreglo
           title: 'hola',
           data: pilot[0],
@@ -41,8 +42,7 @@ controller.update = (req, res) => {
   const { id } = req.params
   const newPilot = req.body
   //console.log({id}, newPilot);
-  conex.query(
-    'UPDATE pilot set ? where id_pilot = ?',
+  conex.query('UPDATE pilot set ? where id_pilot = ?',
     [newPilot, id],
     async(err, rows) => {
      // console.log(rows);
@@ -50,10 +50,11 @@ controller.update = (req, res) => {
        await res.redirect('/listPilot')
     },
   )
+  res.redirect('/listPilot')
 }
 
 //insert new pilot
-controller.add = (req, res) => {
+controller.add = async (req, res) => {
   console.log('File: ', req.file)
   //Undefined because miss enctype in ejs form
   console.log(req.body)
@@ -69,7 +70,6 @@ controller.add = (req, res) => {
     }
   })
 }
-
 
 
 

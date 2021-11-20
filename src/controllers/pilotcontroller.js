@@ -3,12 +3,12 @@ let model = require('../model/pilot')
 const controller = {}
 
 //to show names of teams
-controller.team = (req, res) => {
-  model.team(conex, async (err, teams) => {
+controller.team = async (req, res) => {
+  await model.team(conex, async (err, teams) => {
     if (err) {
       return res.json(err)
     } else {
-      await res.render('./templates/newPilot', {
+      res.render('./templates/newPilot', {
         title: 'algo sera',
         equipos: teams,
       })
@@ -17,29 +17,41 @@ controller.team = (req, res) => {
 }
 
 // to show the pilots in the query
-controller.list = (req, res) => {
-  model.get(conex, async (err, pilots) => {
+controller.list = async (req, res) => {
+  await model.get(conex, (err, pilots) => {
     if (err) {
       res.json(err)
     }
-    await res.render('position', {
+    res.render('position', {
       title: 'Position season 2021',
       data: pilots,
     })
   })
 }
 
-controller.listControl = (req, res) => {
-  model.listControl(conex, async (err, pilots) => {
+controller.listControl = async (req, res) => {
+
+  
+  await model.listControl(conex, (err, pilots) => {
     if (err) {
       res.json(err)
     }
-    await res.render('./templates/listPilot', {
+    res.render('./templates/listPilot', {
       title: 'Pilots from 2021 season',
       data: pilots,
     })
     //  console.log(pilots);
   })
+}
+
+controller.create = async (req, res) => {
+  const new_employee = new Employee(req.body)
+
+  model.create(conex,new_employee, (err, employee) =>{
+    if (err)
+    res.send(err);
+  });
+  
 }
 
 module.exports = controller

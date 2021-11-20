@@ -1,10 +1,10 @@
 const mysql = require('mysql');
 
 //Create data to connecto MySQL
-let conex = mysql.createConnection({
+let conex =  mysql.createConnection({
           host:'localhost',
           user: 'root',
-          password: '',
+          password: 'cjmxc100',
           database : 'formula'
 });
 
