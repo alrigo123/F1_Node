@@ -9,7 +9,7 @@ controller.autor = (req, res) => {
   res.render('autor', { title: 'Autor from this website' })
 }
 
-controller.pilot = (req, res) => {
+controller.pilot = (req, res) => {  
   res.render('pilot', { title: 'Pilot from this website' })
 }
 

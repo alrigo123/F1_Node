@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
 const conex = require('../config/conexion')
 const { promisify } = require('util')
-const path = require('path')
 const config = require('../config/enviroment-variables')
 const model = require('../model/pilot')
 const modelUser = require('../model/user.model')
@@ -22,10 +21,17 @@ controller.register = async (req, res, next) => {
 
     console.log(name_user, user, hashPass, pass)
 
+    //works but error withe templatey try to acople
+    conex.query('SELECT * FROM user WHERE user = ?', [user], (err, results) => {
+      if (results.length > 0) {
+        res.render('./templates/register')
+        // throw 'El usuario ya existe'
+      }
+    })
+
     //make a query to mysql with the parameters equals to de database
-    conex.query(
-      'INSERT INTO user SET ?',
-      { name_user: name_user, user: user, pass: hashPass }, // BD atrivutos
+    conex.query('INSERT INTO user SET ?',
+      { name_user: name_user, user: user, pass: hashPass }, // dataname : databody
       //user is the param who get filled by the query
       (err, user) => {
         console.log(user)
@@ -35,12 +41,12 @@ controller.register = async (req, res, next) => {
 
         res.redirect('/login') // -> redirect manda a la url lo que esta en comillas , mientras que render busca en el directorio views
         //console.log(name_user,hashPass,pass);
-      },
-    )
+      })
   } catch (error) {
     throw `Error catch => ${error.message}`
   }
 }
+
 
 //Function to log in a user
 //lg_jwt with session
@@ -49,25 +55,23 @@ controller.login = (req, res, next) => {
     //getting the data from form in login.js
     const user = req.body.user
     const pass = req.body.pass
+    console.log(user, pass) // -> Try when I log in
 
     modelUser.get(conex, [user], async (err, results) => {
-      if (
-        results.length === 0 ||
-        !(await bcrypt.compare(pass, results[0].pass))
-      ) {
+      if (results.length === 0 || !(await bcrypt.compare(pass, results[0].pass))) {
         /// console.log("Error de logeo");
         res.render('./templates/login', {
-          title: 'Login pero con error',
           alert: true,
+          title: 'Login pero con error',
           alertTitle: 'Error',
           alertMessage: 'Error de usuario',
           alertIcon: 'error',
           showConfirmButton: true,
           timer: false,
-          ruta: 'login',
+          ruta: './templates/login',
         })
       } else {
-        model.listControl(conex, async (err, pilots) => {
+        model.listControl(conex, (err, pilots) => {
           const id = results[0].id
           const token = jwt.sign({ id: id }, config.JWT_SECRET_KEY, {
             expiresIn: config.JWT_EXPIRE,
@@ -80,12 +84,12 @@ controller.login = (req, res, next) => {
             ),
             httpOnly: true,
           }
+          
           res.cookie('jwt', token, cookieOptions)
 
-          if (err) {
-            res.json(err)
-          }
-          await res.render('./templates/listPilot', {
+          if (err) { res.json(err) }
+
+          res.render('./templates/listPilot', {
             title: 'Pilots from 2021 season',
             data: pilots,
             user: user,
@@ -98,24 +102,9 @@ controller.login = (req, res, next) => {
             ruta: 'listPilot',
           })
         })
-
-        /*
-        res.render('./templates/listPilot', {
-          title: 'Lista de Pilotos',
-          alert: true,
-          alertTitle: 'Conexion exitosa',
-          alertMessage: 'Login correcto',
-          alertIcon: 'success',
-          showConfirmButton: false,
-          timer: 800,
-          ruta: 'listPilot',
-        })
-        */
       }
     })
 
-    //query to share and compare the data
-    //conex.query('SELECT * FROM user WHERE user = ?', [user],)
   } catch (error) {
     throw `Error catching => ${error.message}`
   }

@@ -2,10 +2,11 @@ const mysql = require('mysql');
 
 //Create data to connecto MySQL
 let conex =  mysql.createConnection({
-          host:'localhost',
-          user: 'root',
-          password: 'cjmxc100',
-          database : 'formula'
+          host:'biue9pqpuxyldg0nkiex-mysql.services.clever-cloud.com',
+          user: 'uigydhtqlgwmf9zt',
+          port: '3306',
+          password: 'Vgs2IFXV5OJGoCci6oJu',
+          database : 'biue9pqpuxyldg0nkiex'
 });
 
 //Creating connection to mysql

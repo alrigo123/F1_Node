@@ -1,16 +1,21 @@
 
-/* To build file 
+const multer = require('multer')  
+// To build file 
+const express = require('express')
+
+const app = express();
 
 const storage = multer.diskStorage({
-    destination: path.join(__dirname, './public/img/uploads'),
+    destination: path.join(__dirname, '../public/img/uploads'),
     filename: (req, file, cb) => {
       cb(null, file.originalname)
     },
   })
+
   app.use(
     multer({
       storage: storage,
-      dest: path.join(__dirname, './public/img/uploads'),
+      dest: path.join(__dirname, '../public/img/uploads'),
       limits: { filesize: 10000 },
       fileFilter: (req, file, cb, err) => {
         const filetype = /jpeg|jpg|png|gif/
@@ -25,4 +30,4 @@ const storage = multer.diskStorage({
     }).single('photo_pilot'),
   )
 
-  */
+  
